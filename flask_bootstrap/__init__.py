@@ -147,22 +147,22 @@ class Bootstrap(object):
         def lwrap(cdn, primary=static):
             return ConditionalCDN('BOOTSTRAP_SERVE_LOCAL', primary, cdn)
 
-        bootstrap = lwrap(
-            WebCDN('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/%s/'
+        bootstrap = lwrap(            
+            WebCDN('http://cdn.bootcss.com/bootstrap/%s/'                
                    % BOOTSTRAP_VERSION),
             local)
 
         jquery = lwrap(
-            WebCDN('//cdnjs.cloudflare.com/ajax/libs/jquery/%s/'
+            WebCDN('http://cdn.bootcss.com/jquery/%s/'
                    % JQUERY_VERSION),
             local)
 
         html5shiv = lwrap(
-            WebCDN('//cdnjs.cloudflare.com/ajax/libs/html5shiv/%s/'
+            WebCDN('http://cdn.bootcss.com/html5shiv/%s/'
                    % HTML5SHIV_VERSION))
 
         respondjs = lwrap(
-            WebCDN('//cdnjs.cloudflare.com/ajax/libs/respond.js/%s/'
+            WebCDN('http://cdn.bootcss.com/respond.js/%s/'
                    % RESPONDJS_VERSION))
 
         app.extensions['bootstrap'] = {
