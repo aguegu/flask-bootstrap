@@ -35,5 +35,6 @@ change the default cdns from cdnjs.cloudflare.com to cdn.bootcss.com, as cloudfl
 
 Install:
 
-  pip install -e git+git@github.com:aguegu/flask-bootstrap.git#egg=flask-bootstrap
+  pip install -e git+https://github.com/aguegu/flask-bootstrap.git#egg=flask-bootstrap
+
 
